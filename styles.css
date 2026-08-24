@@ -1,0 +1,92 @@
+:root{
+    --color-primary:#003366;
+    --colorprimary-light:#004c99;
+    --color-secondary:#ffd700;
+    --color-background:#f4f4f4;
+    --color-text:#333333;
+    --color-text-light:#666666;
+    --color-white:#fff;/*#ffffff*/
+    /* TIPOS DE FUENTE */
+    --font-family:'Roboto',arial,sans-serif;
+    --font-size-base:16px;
+    --font-size-large:1.25rem;
+    --font-size-x1:2rem;
+    --font-size-xx1:3.5rem;
+
+    /* espaciados */
+    --spacing-small:8px;
+    --spacing-medium:16px;
+    --spacing-large:24px;
+    --spacing-x1:32px;
+    --spacing-xx1:48px;
+}
+*{
+    margin:0; /*px*/
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+header{
+    display: flex;
+    justify-content: space-between;/* Lo centrea todo */
+    align-items: center/* Centrea los elemntos verticalemnte en el flex */;
+    background-color: var(--color-primary);
+    color:var(--color-white)
+}
+header h1{
+    font-size: var(--font-size-x1);
+    font-weight: 700;
+    color:var(--color-white)
+}
+nav ul{
+    display: flex;
+    list-style: none;/* para quitar los puntos del nav */
+    gap: var(--spacing-large);/* Para ecolocar espacios */
+}
+
+nav ul li a{
+    color:var(--color-white);
+    text-decoration: none;
+    padding: var(--spacing-small)var(--spacing-medium);/* Epaciado de arrib y abajo y el segundo de izquierda a derecah */
+    border-radius: 4px;
+}
+/* Lo que pasa en cima del elemento el hover*/ 
+nav ul li a:hover{
+    background-color: #585858;
+    color: var(--color-secondary);
+}
+#inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-xx1)var(--spacing-x1);/* Epaciado de arrib y abajo y el segundo de izquierda a derecah */
+    min-height: 60vh;
+    background: linear-gradient(135deg,var(--color-primary),white);
+    color: var(--color-white);
+
+}
+/* Es equivalente a main section h2 */
+#inicio h2{
+    font-size: var(--font-size-xx1);
+    font-weight: 700;/* Para el ancho de la fuente */
+}
+#inicio p{
+    font-size: var(--font-size-large);
+}
+/* Para el enlace */
+#inicio a{
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    border-radius: 8px;
+    text-decoration: none;/* Quitar el subarayado */
+    font-weight: 700; /* Para el ancho de la letra */
+    font-size: var(--font-size-large);
+}
