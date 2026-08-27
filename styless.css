@@ -1,0 +1,599 @@
+:root {
+    /* Colores */
+    --color-primary: #003366;
+    --color-primary-light: #004c99;
+    --color-secondary: #ffd700;
+    --color-background: #f4f4f4;
+    --color-text: #333333;
+    --color-text-light: #666666;
+    --color-white: #ffffff;
+/* Espaciados */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+/* Fuentes */
+    --font-family: 'Roboto', Arial, sans-serif;
+    --font-size-base: 16px;
+    --font-size-large: 1.25rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 3.5rem;
+/* Sombras */
+    --shadow-small: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-medium: 0 4px 8px rgba(0,0,0,0.15);
+    --shadow-hover: 0 8px 24px rgba(0,0,0,0.25);
+/* Transiciones */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+}
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilos para el cuerpo */
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+/* Estilos para el encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-medium) var(--spacing-xl);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: var(--shadow-small);
+}
+/* Estilos para el título del encabezado */
+header h1 {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-white);
+}
+/* Estilos para la navegación */
+nav ul {
+    display: flex;
+    gap: var(--spacing-large);
+    list-style: none;
+}
+/* Estilos para los enlaces de navegación */
+nav ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: 4px;
+    transition: all var(--transition-fast);
+}
+/* Estilos para el hover de los enlaces de navegación */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--color-secondary);
+}
+/* Estilos para la sección de inicio */
+#inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-xxl) var(--spacing-xl);
+    min-height: 60vh;
+    background: linear-gradient(
+        70deg,
+        var(--color-primary),
+        var(--color-primary-light)
+    );
+    color: var(--color-white);
+}
+/* Estilos para el título de la sección de inicio */
+#inicio h2 {
+    font-size: var(--font-size-xxl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-medium);
+    animation: fadeIn 1.5s ease-in-out;
+}
+/* Estilos para el párrafo de la sección de inicio */
+#inicio p {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--spacing-large);
+    opacity: 0.9;
+    animation: slideIn 1.8s ease-out;
+}
+/* Estilos para el botón de la sección de inicio */
+#inicio a {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    padding: var(--spacing-medium) var(--spacing-xl);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: var(--font-size-large);
+    transition: all var(--transition-medium);
+    animation: fadeIn 2s ease-in-out;
+}
+/* Estilos para el hover del botón de la sección de inicio */
+#inicio a:hover {
+
+    transform: scale(1.05);
+
+    box-shadow: var(--shadow-medium);
+
+    background-color: #ffed4a;
+}
+/* Estilos para la sección de películas */
+#peliculas {
+
+    padding: var(--spacing-xxl) var(--spacing-xl);
+
+    background-color: var(--color-white);
+}
+/* Estilos para el título de la sección de películas */
+#peliculas h2 {
+
+    font-size: var(--font-size-xl);
+
+    color: var(--color-primary);
+
+    text-align: center;
+
+    margin-bottom: var(--spacing-xl);
+}
+/* Estilos para la cuadrícula de películas */
+.peliculas-grid {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: var(--spacing-large);
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+/* Estilos para los artículos de la cuadrícula de películas */
+.peliculas-grid article {
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+    min-width: 250px;
+
+    max-width: 300px;
+
+    background-color: var(--color-white);
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow-medium);
+
+    overflow: hidden;
+
+    transition: all var(--transition-medium);
+}
+/* Estilos para el hover de los artículos de la cuadrícula de películas */
+.peliculas-grid article:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-hover);
+}
+/* Estilos para las imágenes de los artículos de la cuadrícula de películas */
+.peliculas-grid article img {
+
+    width: 100%;
+
+    height: 100%;
+    object-fit: cover;
+
+    object-position: center;
+}
+/* Estilos para los títulos de los artículos de la cuadrícula de películas */
+.peliculas-grid article h3 {
+
+    font-size: var(--font-size-large);
+
+    color: var(--color-primary);
+
+    padding: var(--spacing-medium) var(--spacing-medium) var(--spacing-small);
+}
+/* Estilos para los párrafos de los artículos de la cuadrícula de películas */
+.peliculas-grid article p {
+
+    color: var(--color-text-light);
+
+    padding: 0 var(--spacing-medium) var(--spacing-small);
+
+    font-size: 0.9rem;
+}
+/* Estilos para la sección de testimonios */
+#testimonios {
+
+    padding: var(--spacing-xxl) var(--spacing-xl);
+
+    background-color: var(--color-background);
+
+    text-align: center;
+}
+/* Estilos para el título de la sección de testimonios */
+#testimonios h2 {
+
+    font-size: var(--font-size-xl);
+
+    color: var(--color-primary);
+
+    margin-bottom: var(--spacing-xl);
+}
+/* Estilos para los citas de la sección de testimonios */
+#testimonios blockquote {
+
+    font-size: var(--font-size-large);
+
+    font-style: italic;
+
+    max-width: 700px;
+
+    margin: 0 auto var(--spacing-medium);
+
+    padding: var(--spacing-medium);
+
+    border-left: 4px solid var(--color-secondary);
+
+    background-color: var(--color-white);
+
+    border-radius: 8px;
+
+    box-shadow: var(--shadow-small);
+}
+/* Estilos para la sección de contacto */
+#contacto {
+
+    padding: var(--spacing-xxl) var(--spacing-xl);
+
+    background-color: var(--color-white);
+}
+/* Estilos para el título de la sección de contacto */
+#contacto h2 {
+
+    font-size: var(--font-size-xl);
+
+    color: var(--color-primary);
+
+    text-align: center;
+
+    margin-bottom: var(--spacing-xl);
+}
+/* Estilos para el formulario de contacto */
+form {
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--spacing-medium);
+}
+/* Estilos para los campos del formulario */
+form input,
+form textarea {
+
+    padding: var(--spacing-medium);
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: var(--font-size-base);
+
+    font-family: var(--font-family);
+
+    transition: border-color var(--transition-fast);
+}
+/* Estilos para los campos del formulario al enfocar */
+form input:focus,
+form textarea:focus {
+
+    outline: none;
+
+    border-color: var(--color-primary);
+
+    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.2);
+}
+/* Estilos para el área de texto del formulario */
+form textarea {
+
+    resize: vertical;
+
+    min-height: 120px;
+}
+/* Estilos para el botón del formulario */
+form button {
+
+    background-color: var(--color-primary);
+
+    color: var(--color-white);
+
+    padding: var(--spacing-medium);
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    font-size: var(--font-size-large);
+
+    cursor: pointer;
+
+    transition: all var(--transition-medium);
+}
+/* Estilos para el hover del botón del formulario */
+form button:hover {
+
+    background-color: var(--color-secondary);
+
+    color: var(--color-text);
+
+    transform: scale(1.02);
+
+    box-shadow: var(--shadow-medium);
+}
+/* Estilos para la sección de trailers */
+#trailers {
+
+    padding: var(--spacing-xxl) var(--spacing-xl);
+
+    text-align: center;
+
+    background-color: var(--color-background);
+}
+/* Estilos para el título de la sección de trailers */
+#trailers h2 {
+
+    font-size: var(--font-size-xl);
+
+    color: var(--color-primary);
+
+    margin-bottom: var(--spacing-xl);
+}
+/* Estilos para el iframe de la sección de trailers */
+#trailers iframe {
+
+    max-width: 100%;
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow-medium);
+}
+/* Estilos para el pie de página */
+footer {
+
+    background-color: var(--color-primary);
+
+    color: var(--color-white);
+
+    padding: var(--spacing-large) var(--spacing-xl);
+
+    text-align: center;
+}
+/* Estilos para los párrafos del pie de página */
+footer p {
+
+    font-size: 0.9rem;
+
+    opacity: 0.8;
+
+    margin-bottom: var(--spacing-medium);
+}
+/* Estilos para los enlaces de redes sociales */
+footer .social-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: var(--spacing-large);
+}
+/* Estilos para los enlaces de redes sociales */
+footer .social-links a {
+
+    color: var(--color-white);
+
+    text-decoration: none;
+
+    padding: var(--spacing-small) var(--spacing-medium);
+
+    border-radius: 4px;
+
+    transition: all var(--transition-fast);
+}
+/* Estilos para el hover de los enlaces de redes sociales */
+footer .social-links a:hover {
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+    color: var(--color-secondary);
+}
+/* Estilos para la responsividad */
+@media (min-width: 768px) {
+
+    #inicio {
+        min-height: 50vh;
+
+        padding: var(--spacing-xxl) var(--spacing-xxl);
+    }
+
+    #inicio h2 {
+        font-size: 3rem;
+    }
+
+    .peliculas-grid {
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: var(--spacing-large);
+    }
+
+    .peliculas-grid article {
+
+        min-width: 0;
+
+        max-width: 100%;
+    }
+}
+/* Estilos para pantallas grandes */
+@media (min-width: 1024px) {
+
+    #inicio {
+        min-height: 70vh;
+    }
+
+    #inicio h2 {
+        font-size: var(--font-size-xxl);
+    }
+
+    .peliculas-grid {
+
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* Estilos para pantallas pequeñas */
+@media (max-width: 480px) {
+
+    header {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: var(--spacing-medium);
+    }
+
+    header h1 {
+
+        font-size: var(--font-size-large);
+
+        margin-bottom: var(--spacing-small);
+    }
+
+    nav ul {
+
+        flex-direction: column;
+
+        gap: var(--spacing-small);
+    }
+
+    nav ul li a {
+
+        display: block;
+
+        padding: var(--spacing-small);
+    }
+
+    #inicio {
+
+        padding: var(--spacing-large);
+
+        min-height: 40vh;
+    }
+
+    #inicio h2 {
+        font-size: var(--font-size-xl);
+    }
+
+    #inicio p {
+        font-size: var(--font-size-base);
+    }
+
+    #inicio a {
+        padding: var(--spacing-small) var(--spacing-large);
+        font-size: var(--font-size-base);
+    }
+
+    .peliculas-grid {
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .peliculas-grid article {
+
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .peliculas-grid article img {
+        height: 200px;
+    }
+
+    #trailers iframe {
+        height: 200px;
+    }
+}
+/* Animaciones */
+@keyframes fadeIn {
+
+    0% {
+
+        opacity: 0;
+
+        transform: translateY(-20px);
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+/* Animación de deslizamiento */
+@keyframes slideIn {
+
+    0% {
+
+        opacity: 0;
+
+        transform: translateX(-50px);
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+}
+/* Animación de aparición */
+.peliculas-grid article:nth-child(1) {
+
+    animation: fadeIn 0.5s ease-out;
+}
+/* Animación de aparición para el segundo artículo */
+.peliculas-grid article:nth-child(2) {
+
+    animation: fadeIn 0.7s ease-out;
+}
+/* Animación de aparición para el tercer artículo */
+.peliculas-grid article:nth-child(3) {
+
+    animation: fadeIn 0.9s ease-out;
+}
