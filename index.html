@@ -23,28 +23,29 @@
     <link rel="stylesheet" href="styless.css">
 </head>
 <body>
-    <header>
-        <h1>🎬 Club de Videos</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#peliculas">Películas</a></li>
-                <li><a href="#testimonios">Testimonios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+    <header class="header">
+        <h1 class="header__logo">🎬 Club de Videos</h1>
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li><a class="header__link" href="#inicio">Inicio</a></li>
+                <li><a class="header__link" href="#peliculas">Películas</a></li>
+                <li><a class="header__link" href="#testimonios">Testimonios</a></li>
+                <li><a class="header__link" href="#contacto">Contacto</a></li>
             </ul>
+            <button class="header__toggle">Tema</button><!-- to do  -->
         </nav>
     </header>
     <main>
-        <section id="inicio">
-            <h2>Bienvenido al Club de Videos</h2>
-            <p>Descubre las mejores películas, series y documentales.</p>
-            <a href="#peliculas">Explorar Catálogo</a>
+        <section id="inicio" class="hero">
+            <h2 class="hero__title">Bienvenido al Club de Videos</h2>
+            <p class="hero__subtitle">Descubre las mejores películas, series y documentales.</p>
+            <a class="hero__cta" href="#peliculas">Explorar Catálogo</a>
         </section>
-        <section id="peliculas">
-            <h2>Películas Destacadas</h2>
-            <div class="peliculas-grid">
-                <article itemscope itemtype="https://schema.org/Movie">
-                    <img itemprop="image" 
+        <section id="peliculas" class="cards">
+            <h2 class="cards__title">Películas Destacadas</h2>
+            <div class="cards__grid"><!-- to do reemplazo de '-'por '__'-->
+                <article class="card card--featured" itemscope itemtype="https://schema.org/Movie"><!-- tiene espacion por que tiene dos clases -->
+                    <img itemprop="image" class="card__image"
                          src="assets/images/Padrino.jfif" 
                          alt="Cartel de la película El Padrino">
                     <h3 itemprop="name">El Padrino</h3>
